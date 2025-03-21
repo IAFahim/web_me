@@ -13,7 +13,7 @@ export default function TextCycleOnHold({
                                             text,
                                             title,
                                             action,
-                                            holdDelay = 400, // Default hold delay
+                                            holdDelay = 250, // Default hold delay
                                             className = "swap_on_hold animate-pulse", // Default class name
                                         }: TextCycleOnHoldProps) {
     const holdTimer = useRef<NodeJS.Timeout>(null);

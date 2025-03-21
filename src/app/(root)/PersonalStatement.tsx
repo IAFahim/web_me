@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 "use client"
 import TextCycleOnHold from "@/Components/TextCycleOnHold";
 import useTextCycle from "@/Components/useTextCycle";
@@ -30,12 +29,20 @@ export default function PersonalStatement() {
 
     const universityNameCycle = useTextCycle([
         "Queen Mary",
+        "City",
+        "Kingston",
         "Greenwich",
+        "Brunel"
     ]);
+
+    const courseThatDrewAttention = useTextCycle([
+        "The medical robotics and surgical techniques",
+
+    ])
 
     const lackingPartCycle = useTextCycle([
         "Electrical and Electronic Engineering (EEE)",
-        "Pharmaceutical",
+        "Chemistry and Pharmaceutical Sciences",
     ]);
 
 
@@ -54,9 +61,7 @@ export default function PersonalStatement() {
                     text={childHoodLinkCycle.currentText}
                     title={childHoodLinkCycle.title}
                     action={childHoodLinkCycle.cycleToNextText}/> As
-                    a quiet child, I
-                    spent hours
-                    imagining a beautiful world around me, which stayed with me into
+                    a quiet child, I spent hours imagining a beautiful world around me, which stayed with me into
                     adulthood. At a young age, I was pretty athletic and enjoyed playing badminton and cricket.
                     Still, I couldn't continue due to disciplinary action from my parents, as I used to get lost in
                     those
@@ -94,13 +99,10 @@ export default function PersonalStatement() {
                 </p>
                 <p>
                     Around my final year, I learned the value of teamwork and got a chance to motivate others. I also
-                    got to
-                    do a virtual internship at Mysoft Limited & eSRD-Lab, BUET, with enhanced data analytical skills and
-                    the
-                    ability to work under pressure. I have faced different types of technology and visualisation
-                    libraries.
-                    With an elevated view, I learned about recent advancements in computer hardware
-                    in <TextCycleOnHold
+                    got to do a virtual internship at Mysoft Limited & eSRD-Lab, BUET, with enhanced data analytical
+                    skills and the ability to work under pressure. I have faced different types of technology and
+                    visualisation libraries. With an elevated view, I learned about recent advancements in computer
+                    hardware in <TextCycleOnHold
                     text={universitySubjectCycle.currentText}
                     title={universitySubjectCycle.title}
                     action={universitySubjectCycle.cycleToNextText}/> applications. <TextCycleOnHold
@@ -120,10 +122,12 @@ export default function PersonalStatement() {
                     the centre of the study <TextCycleOnHold
                     text={universityOneOfTheBestCycle.currentText}
                     title={universityOneOfTheBestCycle.title}
-                    action={universityOneOfTheBestCycle.cycleToNextText}/> The
-                    medical robotics and surgical techniques course module also drew my attention because of my
-                    unfulfilled childhood dream. Now, I want to contribute to medical science in my lifetime by doing
-                    this program. I may lack
+                    action={universityOneOfTheBestCycle.cycleToNextText}/> <TextCycleOnHold
+                    text={courseThatDrewAttention.currentText}
+                    title={courseThatDrewAttention.title}
+                    action={courseThatDrewAttention.cycleToNextText}/> course
+                    module also drew my attention because of my unfulfilled childhood dream. Now, I want to contribute
+                    to medical science in my lifetime by doing this program. I may lack
                     the <TextCycleOnHold
                     text={lackingPartCycle.currentText}
                     title={lackingPartCycle.title}
@@ -132,25 +136,15 @@ export default function PersonalStatement() {
                 </p>
                 <p>
                     During my undergraduate studies, I was lucky to be part of ACM and ACM-W. Because I was comfortable
-                    with
-                    administrative tasks, I quickly got promoted to being In-Charge. I was shocked to discover that
-                    skill in
-                    me.
-                    Currently, I am studying advanced Python and practising Deep Learning, LLM, and AI Agents, hoping to
-                    be
-                    helpful as soon as I join my higher studies. For my journey, I would have to leave my life here to
-                    travel to
-                    a different place to study. However, travelling has been a passion of mine since I was young.
-                    Travelling
-                    and
-                    visiting a new place always gives me a rush of lasting happiness, a thing I learned by going to
-                    every
-                    corner
-                    of my homeland and a few other places. Given the chance, I would be a valuable student at your
-                    university
-                    and get the required skills and mentorship. I am eager to get the opportunity to be a part of this
-                    next
-                    generation of human achievement.
+                    with administrative tasks, I quickly got promoted to being In-Charge. I was shocked to discover that
+                    skill in me. Currently, I am studying advanced Python and practising Deep Learning, LLM, and AI
+                    Agents, hoping to be helpful as soon as I join my higher studies. For my journey, I would have to
+                    leave my life here to travel to a different place to study. However, travelling has been a passion
+                    of mine since I was young. Travelling and visiting a new place always gives me a rush of lasting
+                    happiness, a thing I learned by going to every corner of my homeland and a few other places. Given
+                    the chance, I would be a valuable student at your university and get the required skills and
+                    mentorship. I am eager to get the opportunity to be a part of this next generation of human
+                    achievement.
                 </p>
             </div>
         </>
