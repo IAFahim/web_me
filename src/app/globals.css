@@ -31,11 +31,12 @@ p {
 
 @layer utilities {
     .swap_on_hold {
-        @apply inline text-yellow-700 border border-gray-300 rounded-md cursor-pointer
+        @apply inline  border border-gray-300 rounded-md cursor-pointer
         bg-gray-100 hover:bg-gray-200 hover:border-gray-400 transition-colors duration-200
     }
 
     .center_p {
-        @apply font-[var(--font-geist-sans)] m-20
+
+        @apply w-full flex flex-col items-center pt-10 lg:px-20 sm:px-10 xl:px-44 2xl:px-56
     }
 }
