@@ -1,47 +1,46 @@
 "use client"
-import {useRef, useState} from "react";
+import {useRef} from "react";
 
 interface TextCycleOnHoldProps {
-    index: number;
-    datas: string[];
-    onTextChange?: (index: number) => void;
+    text: string;
+    title: string;
+    action: () => void;
+    holdDelay?: number; // Optional prop for hold delay
+    className?: string; // Optional prop for custom class name
 }
 
-export default function TextCycleOnHold({index, datas, onTextChange}: TextCycleOnHoldProps) {
-    const [currentIndex, setCurrentIndex] = useState(index);
+export default function TextCycleOnHold({
+                                            text,
+                                            title,
+                                            action,
+                                            holdDelay = 500, // Default hold delay
+                                            className = "swap_on_hold", // Default class name
+                                        }: TextCycleOnHoldProps) {
     const holdTimer = useRef<NodeJS.Timeout>(null);
 
-    const HOLD_DELAY = 500;
-
-    const handleHold = () => {
-        setCurrentIndex((currentIndex + 1) % datas.length);
-        onTextChange?.(currentIndex);
-    };
-
     const startHoldTimer = () => {
-        holdTimer.current = setTimeout(handleHold, HOLD_DELAY);
+        holdTimer.current = setTimeout(action, holdDelay);
     };
 
     const clearHoldTimer = () => {
         if (holdTimer.current) {
             clearTimeout(holdTimer.current);
-            holdTimer.current = null; // Clear the timer ID
+            holdTimer.current = null;
         }
     };
 
-
     return (
-        <span className={"swap_on_hold"}
-              onMouseDown={startHoldTimer}
-              onMouseUp={clearHoldTimer}
-              onMouseLeave={clearHoldTimer}
-
-              onTouchStart={startHoldTimer}
-              onTouchEnd={clearHoldTimer}
-              onTouchCancel={clearHoldTimer}
-              title={`${currentIndex + 1} of ${datas.length}`}
+        <span
+            className={className} // Use the configurable class name
+            onMouseDown={startHoldTimer}
+            onMouseUp={clearHoldTimer}
+            onMouseLeave={clearHoldTimer}
+            onTouchStart={startHoldTimer}
+            onTouchEnd={clearHoldTimer}
+            onTouchCancel={clearHoldTimer}
+            title={title}
         >
-            {datas[currentIndex]}
+            {text}
         </span>
-    )
+    );
 }

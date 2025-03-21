@@ -1,10 +1,11 @@
 "use client"
 import TextCycleOnHold from "@/Components/TextCycleOnHold";
 import {useState} from "react";
+import useTextCycle from "@/Components/useTextCycle";
 
 export default function PersonalStatement() {
 
-    const fieldChildHoodLink = [
+    const childHoodLinks = [
         "It clarified the field’s potential and reminded me of a childhood science-fiction series where a robot, a dear friend to an ordinary boy, solved his mundane daily tasks. At that time, having a robot as my companion was a dream.",
         "Even if I was unable to take a profession related to medicine, I could understand how this field may assist other fields In discovery and organization. And in the process may even get a chance to treat others, a similar path toward the childhood dream."
     ]
@@ -14,11 +15,8 @@ export default function PersonalStatement() {
         "KFC"
     ]
 
-    const [universitySubjectIndex, setUniversitySubjectIndex] = useState(0);
-
-    function handleUniversitySubjectIndexChange(current:number) {
-        setUniversitySubjectIndex(current);
-    }
+    const childHoodLinkCycle = useTextCycle(childHoodLinks);
+    const universitySubjectCycle = useTextCycle(universitySubjects);
 
     return (
         <div className={"center_p"}>
@@ -28,12 +26,11 @@ export default function PersonalStatement() {
                 progress, but at a crossroads in life, I was introduced to Computer Science and Engineering (CSE).
                 Initially, this shift left me feeling lost and uncertain. However, this changed with the introduction of
                 Machine Learning (ML) during my undergraduate studies. This was a turning point in my life to finally
-                grasp
-                this field. <TextCycleOnHold index={0} datas={fieldChildHoodLink}/> As a quiet child, I spent hours
-                imagining
-                a beautiful world around me, which
-                stayed
-                with me into adulthood. At a young age, I was pretty athletic and enjoyed playing badminton and cricket.
+                grasp this field.
+                <TextCycleOnHold text={childHoodLinkCycle.currentText}
+                                 title={childHoodLinkCycle.title}
+                                 action={childHoodLinkCycle.cycleToNextText}/> As a quiet child, I spent hours imagining a beautiful world around me, which stayed with me into
+                adulthood. At a young age, I was pretty athletic and enjoyed playing badminton and cricket.
                 Still, I couldn't continue due to disciplinary action from my parents, as I used to get lost in those
                 activities.
             </p>
@@ -62,26 +59,26 @@ export default function PersonalStatement() {
             </p>
             <p>
                 Around my final year, I learned the value of teamwork and got a chance to motivate others. I also got to
-                do
-                a virtual internship at Mysoft Limited & eSRD-Lab, BUET, with enhanced data analytical skills and the
+                do a virtual internship at Mysoft Limited & eSRD-Lab, BUET, with enhanced data analytical skills and the
                 ability to work under pressure. I have faced different types of technology and visualisation libraries.
-                With
-                an elevated view, I learned about recent advancements in computer hardware
-                in <TextCycleOnHold index={universitySubjectIndex} datas={universitySubjects} onTextChange={handleUniversitySubjectIndexChange}/> applications.
-                I want to focus on the aspects of robots to be companions to humans. This topic isn't currently fully
-                available in Bangladesh. Therefore, I want to study abroad to be on the emerging side of this
-                technology.
-                The UK, a hub of cultures, knowledge, and history, inspired me to look for a suitable university there.
-                Queen Mary got my attention with the offering of this subject, which combines <TextCycleOnHold
-                index={universitySubjectIndex} datas={universitySubjects} onTextChange={handleUniversitySubjectIndexChange}/> at
-                the
-                centre
-                of the study with one of the best research facilities in the UK. The medical robotics and surgical
-                techniques course module also drew my attention because of my unfulfilled childhood dream. Now, I want
-                to
-                contribute to medical science in my lifetime by doing this program. I may lack the Electrical and
-                Electronic
-                Engineering (EEE) part, but I am willing to put my whole heart into learning all about it.
+                With an elevated view, I learned about recent advancements in computer hardware
+                in <TextCycleOnHold
+                text={universitySubjectCycle.currentText}
+                title={universitySubjectCycle.title}
+                action={universitySubjectCycle.cycleToNextText}/> applications.
+                I want to focus on the aspects of robots to be companions to humans. This topic isn't
+                currently fully available in Bangladesh. Therefore, I want to study abroad to be on the emerging side of
+                this technology. The UK, a hub of cultures, knowledge, and history, inspired me to look for a suitable
+                university there. Queen Mary got my attention with the offering of this subject, which
+                combines <TextCycleOnHold
+                text={universitySubjectCycle.currentText}
+                title={universitySubjectCycle.title}
+                action={universitySubjectCycle.cycleToNextText}/> at
+                the centre of the study with one of the best research facilities in the UK. The medical robotics and
+                surgical techniques course module also drew my attention because of my unfulfilled childhood dream. Now,
+                I want to contribute to medical science in my lifetime by doing this program. I may lack the Electrical
+                and Electronic Engineering (EEE) part, but I am willing to put my whole heart into learning all about
+                it.
             </p>
             <p>
                 During my undergraduate studies, I was lucky to be part of ACM and ACM-W. Because I was comfortable with
