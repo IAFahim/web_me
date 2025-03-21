@@ -1,26 +1,43 @@
-import UniversitySubject from "../../Components/UniversitySubject";
+"use client"
+import TextCycleOnHold from "@/Components/TextCycleOnHold";
+import {useState} from "react";
 
 export default function PersonalStatement() {
+
+    const fieldChildHoodLink = [
+        "It clarified the field’s potential and reminded me of a childhood science-fiction series where a robot, a dear friend to an ordinary boy, solved his mundane daily tasks. At that time, having a robot as my companion was a dream.",
+        "Even if I was unable to take a profession related to medicine, I could understand how this field may assist other fields In discovery and organization. And in the process may even get a chance to treat others, a similar path toward the childhood dream."
+    ]
+
+    const universitySubjects = [
+        "Robotics and AI",
+        "KFC"
+    ]
+
+    const [universitySubjectIndex, setUniversitySubjectIndex] = useState(0);
+
+    function handleUniversitySubjectIndexChange(current:number) {
+        setUniversitySubjectIndex(current);
+    }
+
     return (
-        <>
-            <p className={"m-2 font-[family-name:var(--font-geist-sans)]"}>
+        <div className={"center_p"}>
+            <p>
                 I am Bushra Hossain, the eldest and only daughter of my parents. From a young age, I was inspired by a
                 doctor and wanted to help people by pursuing the same profession. My ambition guided my early academic
                 progress, but at a crossroads in life, I was introduced to Computer Science and Engineering (CSE).
                 Initially, this shift left me feeling lost and uncertain. However, this changed with the introduction of
                 Machine Learning (ML) during my undergraduate studies. This was a turning point in my life to finally
                 grasp
-                this field. It clarified the field’s potential and reminded me of a childhood science-fiction series
-                where a
-                robot, a dear friend to an ordinary boy, solved his mundane daily tasks. At that time, having a robot as
-                my
-                companion was a dream. As a quiet child, I spent hours imagining a beautiful world around me, which
+                this field. <TextCycleOnHold index={0} datas={fieldChildHoodLink}/> As a quiet child, I spent hours
+                imagining
+                a beautiful world around me, which
                 stayed
                 with me into adulthood. At a young age, I was pretty athletic and enjoyed playing badminton and cricket.
                 Still, I couldn't continue due to disciplinary action from my parents, as I used to get lost in those
                 activities.
             </p>
-            <p className={"m-2 font-[family-name:var(--font-geist-sans)]"}>
+            <p>
                 I graduated from a top university in Bangladesh, North South University. CSE was the subject of code,
                 and I
                 got into it not knowing what it was from my relatives' assessment. Beforehand, I knew I didn't like
@@ -43,19 +60,21 @@ export default function PersonalStatement() {
                 life. For the first time, I was interested in computer science. But the study time at this university is
                 over. And I want to see what the world has in store.
             </p>
-            <p className={"m-2 font-[family-name:var(--font-geist-sans)]"}>
+            <p>
                 Around my final year, I learned the value of teamwork and got a chance to motivate others. I also got to
                 do
                 a virtual internship at Mysoft Limited & eSRD-Lab, BUET, with enhanced data analytical skills and the
                 ability to work under pressure. I have faced different types of technology and visualisation libraries.
                 With
-                an elevated view, I learned about recent advancements in computer hardware in <UniversitySubject/>
-                applications.
+                an elevated view, I learned about recent advancements in computer hardware
+                in <TextCycleOnHold index={universitySubjectIndex} datas={universitySubjects} onTextChange={handleUniversitySubjectIndexChange}/> applications.
                 I want to focus on the aspects of robots to be companions to humans. This topic isn't currently fully
                 available in Bangladesh. Therefore, I want to study abroad to be on the emerging side of this
                 technology.
                 The UK, a hub of cultures, knowledge, and history, inspired me to look for a suitable university there.
-                Queen Mary got my attention with the offering of this subject, which combines <UniversitySubject/> at the
+                Queen Mary got my attention with the offering of this subject, which combines <TextCycleOnHold
+                index={universitySubjectIndex} datas={universitySubjects} onTextChange={handleUniversitySubjectIndexChange}/> at
+                the
                 centre
                 of the study with one of the best research facilities in the UK. The medical robotics and surgical
                 techniques course module also drew my attention because of my unfulfilled childhood dream. Now, I want
@@ -64,7 +83,7 @@ export default function PersonalStatement() {
                 Electronic
                 Engineering (EEE) part, but I am willing to put my whole heart into learning all about it.
             </p>
-            <p className={"m-2 font-[family-name:var(--font-geist-sans)]"}>
+            <p>
                 During my undergraduate studies, I was lucky to be part of ACM and ACM-W. Because I was comfortable with
                 administrative tasks, I quickly got promoted to being In-Charge. I was shocked to discover that skill in
                 me.
@@ -80,6 +99,6 @@ export default function PersonalStatement() {
                 and get the required skills and mentorship. I am eager to get the opportunity to be a part of this next
                 generation of human achievement.
             </p>
-        </>
+        </div>
     )
 }
