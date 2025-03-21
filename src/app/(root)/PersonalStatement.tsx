@@ -23,7 +23,7 @@ export default function PersonalStatement() {
 
     const universityNames=[
         "Queen Mary",
-        "City University",
+        "City St George's, University of London,",
         "Kingston",
         "Greenwich",
         "Brunel"
