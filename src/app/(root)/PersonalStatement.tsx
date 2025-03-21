@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client"
 import TextCycleOnHold from "@/Components/TextCycleOnHold";
 import useTextCycle from "@/Components/useTextCycle";
