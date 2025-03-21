@@ -21,24 +21,31 @@ export default function PersonalStatement() {
         "I want to gain enough knowledge in AI so that one day I can assist medical professionals.",
     ]);
 
-    const universityOneOfTheBestCycle = useTextCycle([
-        "with one of the best research facilities in the UK.",
-        "with one of the best-known university for masters in Artificial intelligence in UK.",
-        "with one of the best-known university for masters in Machine Learning in UK.",
-    ]);
-
-    const universityNameCycle = useTextCycle([
+    const universityNames=[
         "Queen Mary",
         "City",
         "Kingston",
         "Greenwich",
         "Brunel"
-    ]);
+    ];
+
+    const universityNameCycle = useTextCycle(universityNames);
+
+    const universityOneOfTheBestCycle = useTextCycle([
+        "with one of the best research facilities in the UK.",
+        "with one of the best-known university for masters in Artificial intelligence in UK.",
+        "with one of the best AI Lab in UK for Deep Learning.",
+        "with long-standing relationship British Computer Society (BCS) that accredits them in UK.",
+        "with one of the most diverse university in UK"
+    ], universityNames);
 
     const courseThatDrewAttention = useTextCycle([
-        "The medical robotics and surgical techniques",
-
-    ])
+        "The medical robotics and surgical techniques along with ML and AI for engineering course modules",
+        "The agents and multi-agent Systems along with Industrial AI for engineering course modules",
+        "The cyber security and AI applications along with ML and DL course modules",
+        "The machine learning along with data visualisation course modules",
+        "The high performance computational infrastructures along with quantitative data analysis course modules",
+    ], universityNames)
 
     const lackingPartCycle = useTextCycle([
         "Electrical and Electronic Engineering (EEE)",
@@ -125,8 +132,8 @@ export default function PersonalStatement() {
                     action={universityOneOfTheBestCycle.cycleToNextText}/> <TextCycleOnHold
                     text={courseThatDrewAttention.currentText}
                     title={courseThatDrewAttention.title}
-                    action={courseThatDrewAttention.cycleToNextText}/> course
-                    module also drew my attention because of my unfulfilled childhood dream. Now, I want to contribute
+                    action={courseThatDrewAttention.cycleToNextText}/>also
+                    drew my attention because of my unfulfilled childhood dream. Now, I want to contribute
                     to medical science in my lifetime by doing this program. I may lack
                     the <TextCycleOnHold
                     text={lackingPartCycle.currentText}
