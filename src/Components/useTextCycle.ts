@@ -7,7 +7,7 @@ interface UseTextCycleResult {
     cycleToNextText: () => void; // More descriptive name
 }
 
-function useTextCycle(texts: string[], hints?: string[]): UseTextCycleResult {
+function useTextCycle(texts: string[]): UseTextCycleResult {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const cycleToNextText = () => { // More descriptive name
@@ -15,14 +15,7 @@ function useTextCycle(texts: string[], hints?: string[]): UseTextCycleResult {
     };
 
     const currentText = texts[currentIndex];
-    let title = `${currentIndex + 1} of ${texts.length}`;
-    if (hints) {
-        title += "in ";
-        for (const hint of hints) {
-            title += hint;
-        }
-    }
-
+    const title = `${currentIndex + 1} of ${texts.length}`;
     return {
         currentIndex,
         currentText,

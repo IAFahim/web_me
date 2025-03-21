@@ -23,7 +23,7 @@ export default function PersonalStatement() {
 
     const universityNames=[
         "Queen Mary",
-        "City",
+        "City University",
         "Kingston",
         "Greenwich",
         "Brunel"
@@ -37,7 +37,7 @@ export default function PersonalStatement() {
         "with one of the best AI Lab in UK for Deep Learning.",
         "with long-standing relationship British Computer Society (BCS) that accredits them in UK.",
         "with one of the most diverse university in UK"
-    ], universityNames);
+    ]);
 
     const courseThatDrewAttention = useTextCycle([
         "The medical robotics and surgical techniques along with ML and AI for engineering course modules",
@@ -45,7 +45,7 @@ export default function PersonalStatement() {
         "The cyber security and AI applications along with ML and DL course modules",
         "The machine learning along with data visualisation course modules",
         "The high performance computational infrastructures along with quantitative data analysis course modules",
-    ], universityNames)
+    ])
 
     const lackingPartCycle = useTextCycle([
         "Electrical and Electronic Engineering (EEE)",
@@ -132,7 +132,7 @@ export default function PersonalStatement() {
                     action={universityOneOfTheBestCycle.cycleToNextText}/> <TextCycleOnHold
                     text={courseThatDrewAttention.currentText}
                     title={courseThatDrewAttention.title}
-                    action={courseThatDrewAttention.cycleToNextText}/>also
+                    action={courseThatDrewAttention.cycleToNextText}/> also
                     drew my attention because of my unfulfilled childhood dream. Now, I want to contribute
                     to medical science in my lifetime by doing this program. I may lack
                     the <TextCycleOnHold
