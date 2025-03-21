@@ -27,16 +27,21 @@ body {
 
 p {
     margin-bottom: 1em;
+    font-size: 1.25em;
 }
+
 
 @layer utilities {
     .swap_on_hold {
         @apply inline  border border-gray-300 rounded-md cursor-pointer
-        bg-gray-100 hover:bg-gray-200 hover:border-gray-400 transition-colors duration-200
+        bg-yellow-100 hover:bg-blue-200 hover:border-blue-400 transition-colors duration-200
+    }
+
+    .heading {
+        @apply px-6 py-3 font-extrabold  sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] max-w-5xl text-center;
     }
 
     .center_p {
-
         @apply w-full flex flex-col items-center pt-10 lg:px-20 sm:px-10 xl:px-44 2xl:px-56
     }
 }

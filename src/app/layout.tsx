@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "SOP",
-    description: "SOP",
+    title: "Buhsra Hossain",
+    description: "Personal Statement of Buhsra Hossain",
 };
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {

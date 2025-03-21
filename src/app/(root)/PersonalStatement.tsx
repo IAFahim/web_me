@@ -4,22 +4,43 @@ import useTextCycle from "@/Components/useTextCycle";
 
 export default function PersonalStatement() {
 
-    const childHoodLinks = [
+    const childHoodLinkCycle = useTextCycle([
         "It clarified the field’s potential and reminded me of a childhood science-fiction series where a robot, a dear friend to an ordinary boy, solved his mundane daily tasks. At that time, having a robot as my companion was a dream.",
         "Even if I was unable to take a profession related to medicine, I could understand how this field may assist other fields In discovery and organization. And in the process may even get a chance to treat others, a similar path toward the childhood dream."
-    ]
+    ]);
 
-    const universitySubjects = [
+    const universitySubjectCycle = useTextCycle([
         "Robotics and AI",
-        "KFC"
-    ]
+        "Artificial Intelligence",
+        "Data Science",
+        "Machine Learning",
+    ]);
 
-    const childHoodLinkCycle = useTextCycle(childHoodLinks);
-    const universitySubjectCycle = useTextCycle(universitySubjects);
+    const fieldFocusCycle = useTextCycle([
+        "I want to focus on the aspects of robots to be companions to humans.",
+        "I want to gain enough knowledge in AI so that one day I can assist medical professionals.",
+    ]);
+
+    const universityOneOfTheBestCycle = useTextCycle([
+        "with one of the best research facilities in the UK.",
+        "with one of the best-known university for masters in Artificial intelligence in UK.",
+        "with one of the best-known university for masters in Machine Learning in UK.",
+    ]);
+
+    const universityNameCycle = useTextCycle([
+        "Queen Mary",
+        "Greenwich",
+    ]);
+
+    const lackingPartCycle = useTextCycle([
+        "Electrical and Electronic Engineering (EEE)",
+        "Pharmaceutical",
+    ]);
+
 
     return (
         <>
-            <h1 className={"font-[var(--font-geist-sans)]"}>Personal Statement</h1>
+            <h1 className={"heading"}>Personal Statement</h1>
             <div className={"center_p"}>
                 <p>
                     I am Bushra Hossain, the eldest and only daughter of my parents. From a young age, I was inspired by
@@ -81,25 +102,32 @@ export default function PersonalStatement() {
                     in <TextCycleOnHold
                     text={universitySubjectCycle.currentText}
                     title={universitySubjectCycle.title}
-                    action={universitySubjectCycle.cycleToNextText}/> applications.
-                    I want to focus on the aspects of robots to be companions to humans. This topic isn't
+                    action={universitySubjectCycle.cycleToNextText}/> applications. <TextCycleOnHold
+                    text={fieldFocusCycle.currentText}
+                    title={fieldFocusCycle.title}
+                    action={fieldFocusCycle.cycleToNextText}/> This topic isn't
                     currently fully available in Bangladesh. Therefore, I want to study abroad to be on the emerging
-                    side of
-                    this technology. The UK, a hub of cultures, knowledge, and history, inspired me to look for a
-                    suitable
-                    university there. Queen Mary got my attention with the offering of this subject, which
-                    combines <TextCycleOnHold
+                    side of this technology. The UK, a hub of cultures, knowledge, and history, inspired me to look for
+                    a suitable university there. <TextCycleOnHold
+                    text={universityNameCycle.currentText}
+                    title={universityNameCycle.title}
+                    action={universityNameCycle.cycleToNextText}/> got my attention with the offering of this
+                    subject, which combines <TextCycleOnHold
                     text={universitySubjectCycle.currentText}
                     title={universitySubjectCycle.title}
                     action={universitySubjectCycle.cycleToNextText}/> at
-                    the centre of the study with one of the best research facilities in the UK. The medical robotics and
-                    surgical techniques course module also drew my attention because of my unfulfilled childhood dream.
-                    Now,
-                    I want to contribute to medical science in my lifetime by doing this program. I may lack the
-                    Electrical
-                    and Electronic Engineering (EEE) part, but I am willing to put my whole heart into learning all
-                    about
-                    it.
+                    the centre of the study <TextCycleOnHold
+                    text={universityOneOfTheBestCycle.currentText}
+                    title={universityOneOfTheBestCycle.title}
+                    action={universityOneOfTheBestCycle.cycleToNextText}/> The
+                    medical robotics and surgical techniques course module also drew my attention because of my
+                    unfulfilled childhood dream. Now, I want to contribute to medical science in my lifetime by doing
+                    this program. I may lack
+                    the <TextCycleOnHold
+                    text={lackingPartCycle.currentText}
+                    title={lackingPartCycle.title}
+                    action={lackingPartCycle.cycleToNextText}/> part,
+                    but I am willing to put my whole heart into learning all about it.
                 </p>
                 <p>
                     During my undergraduate studies, I was lucky to be part of ACM and ACM-W. Because I was comfortable
