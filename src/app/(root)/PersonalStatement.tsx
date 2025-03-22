@@ -34,7 +34,7 @@ export default function PersonalStatement() {
     const universityOneOfTheBestCycle = useTextCycle([
         "with one of the best research facilities in the UK.",
         "with one of the best-known universities for masters in Artificial intelligence in the UK.",
-        "with one of the best AI lab in the UK for Deep Learning.",
+        "with one of the best AI lab in for Deep Learning in the UK.",
         "with long-standing relationship with British Computer Society (BCS).",
         "with one of the most diverse university in the UK"
     ]);
@@ -42,7 +42,7 @@ export default function PersonalStatement() {
     const courseThatDrewAttention = useTextCycle([
         "Also with medical robotics and surgical techniques along with ML and AI for engineering course modules",
         "Also with agents and multi-agent Systems along with Industrial AI for engineering course modules",
-        "Also with cyber security and AI applications an stimulating topic along with main focus on ML and DL course modules",
+        "Also with The cybersecurity and AI applications an stimulating topic along with main focus on ML and DL course modules",
         "Also with machine learning along with data visualisation course modules",
         "Also with high performance computational infrastructures along with quantitative data analysis course modules",
     ])
