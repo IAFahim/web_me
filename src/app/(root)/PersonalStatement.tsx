@@ -22,11 +22,11 @@ export default function PersonalStatement() {
     ]);
 
     const universityNames=[
-        "Queen Mary",
+        "Queen Mary, University of London",
         "City St George's, University of London,",
-        "Kingston",
-        "Greenwich",
-        "Brunel"
+        "Kingston, University of London,",
+        "Greenwich, University of London,",
+        "Brunel, University of London,"
     ];
 
     const universityNameCycle = useTextCycle(universityNames);
