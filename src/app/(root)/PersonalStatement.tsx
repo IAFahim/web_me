@@ -35,7 +35,7 @@ export default function PersonalStatement() {
         "with one of the best research facilities in the UK.",
         "with one of the best-known university for masters in Artificial intelligence in UK.",
         "with one of the best AI Lab in UK for Deep Learning.",
-        "with long-standing relationship British Computer Society (BCS) that accredits them in UK.",
+        "with long-standing relationship with British Computer Society (BCS).",
         "with one of the most diverse university in UK"
     ]);
 
@@ -46,6 +46,10 @@ export default function PersonalStatement() {
         "The machine learning along with data visualisation course modules",
         "The high performance computational infrastructures along with quantitative data analysis course modules",
     ])
+    const attentionCourse = useTextCycle([
+        "attention because of my unfulfilled childhood dream. Now,"
+
+    ]);
 
     const lackingPartCycle = useTextCycle([
         "Electrical and Electronic Engineering (EEE)",
