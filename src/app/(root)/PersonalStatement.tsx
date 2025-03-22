@@ -6,7 +6,7 @@ export default function PersonalStatement() {
 
     const childHoodLinkCycle = useTextCycle([
         "It clarified the field’s potential and reminded me of a childhood science-fiction series where a robot, a dear friend to an ordinary boy, solved his mundane daily tasks. At that time, having a robot as my companion was a dream.",
-        "Even if I was unable to take a profession related to medicine, I could understand how this field may assist other fields In discovery and organization. And in the process may even get a chance to treat others, a similar path toward the childhood dream."
+        "Even if I was unable to take a profession related to medicine, I could understand how this field may assist other fields in discovery and organization. And in the process I may even get a chance to treat others, a similar path toward the childhood dream."
     ]);
 
     const universitySubjectCycle = useTextCycle([
@@ -53,14 +53,16 @@ export default function PersonalStatement() {
     ]);
 
 
+
+
+
     return (
         <>
             <h1 className={"heading"}>Personal Statement</h1>
             <div className={"center_p"}>
                 <p>
                     I am Bushra Hossain, the eldest and only daughter of my parents. From a young age, I was inspired by
-                    a
-                    doctor and wanted to help people by pursuing the same profession. My ambition guided my early
+                    a doctor and wanted to help people by pursuing the same profession. My ambition guided my early
                     academic progress, but at a crossroads in life, I was introduced to Computer Science and Engineering
                     (CSE). Initially, this shift left me feeling lost and uncertain. However, this changed with the
                     introduction of Machine Learning (ML) during my undergraduate studies. This was a turning point in
