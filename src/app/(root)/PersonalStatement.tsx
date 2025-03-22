@@ -46,9 +46,9 @@ export default function PersonalStatement() {
         "The machine learning along with data visualisation course modules",
         "The high performance computational infrastructures along with quantitative data analysis course modules",
     ])
-    const attentionCourse = useTextCycle([
-        "attention because of my unfulfilled childhood dream. Now,"
-
+    const attentionCourseCycle = useTextCycle([
+        "attention because of my unfulfilled childhood dream. Now,",
+        "attention."
     ]);
 
     const lackingPartCycle = useTextCycle([
@@ -139,7 +139,10 @@ export default function PersonalStatement() {
                     text={courseThatDrewAttention.currentText}
                     title={courseThatDrewAttention.title}
                     action={courseThatDrewAttention.cycleToNextText}/> also
-                    drew my attention because of my unfulfilled childhood dream. Now, I want to contribute
+                    drew my <TextCycleOnHold
+                    text={attentionCourseCycle.currentText}
+                    title={attentionCourseCycle.title}
+                    action={attentionCourseCycle.cycleToNextText}/> I want to contribute
                     to medical science in my lifetime by doing this program. I may lack
                     the <TextCycleOnHold
                     text={lackingPartCycle.currentText}
