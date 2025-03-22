@@ -42,7 +42,7 @@ export default function PersonalStatement() {
     const courseThatDrewAttention = useTextCycle([
         "The medical robotics and surgical techniques along with ML and AI for engineering course modules",
         "The agents and multi-agent Systems along with Industrial AI for engineering course modules",
-        "The cyber security and AI applications along with ML and DL course modules",
+        "The cyber security and AI applications an stimulating topic along with main focus on ML and DL course modules",
         "The machine learning along with data visualisation course modules",
         "The high performance computational infrastructures along with quantitative data analysis course modules",
     ])
