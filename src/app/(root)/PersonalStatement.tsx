@@ -25,7 +25,7 @@ export default function PersonalStatement() {
         "Queen Mary, University of London",
         "City St George's, University of London,",
         "Kingston, University of London,",
-        "University of Greenwich, London,",
+        "University of Greenwich,",
         "Brunel, University of London,"
     ];
 
