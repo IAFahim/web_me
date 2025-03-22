@@ -6,7 +6,7 @@ export default function PersonalStatement() {
 
     const childHoodLinkCycle = useTextCycle([
         "It clarified the field’s potential and reminded me of a childhood science-fiction series where a robot, a dear friend to an ordinary boy, solved his mundane daily tasks. At that time, having a robot as my companion was a dream.",
-        "Even if I was unable to take a profession related to medicine, I could understand how this field may assist other fields in discovery and organization. And in the process I may even get a chance to treat others, a similar path toward the childhood dream."
+        "Even if I was unable to take a profession related to medicine, I could understand how this field may assist other fields in discovery and organisation. In the process, I may even get a chance to treat others on a similar path toward the childhood dream."
     ]);
 
     const universitySubjectCycle = useTextCycle([
@@ -18,11 +18,11 @@ export default function PersonalStatement() {
 
     const fieldFocusCycle = useTextCycle([
         "I want to focus on the aspects of robots to be companions to humans.",
-        "I want to gain enough knowledge in AI so that one day I can assist medical professionals.",
+        "I want to gain enough knowledge in AI so that one day, I can assist medical professionals.",
     ]);
 
     const universityNames=[
-        "Queen Mary, University of London",
+        "Queen Mary, University of London,",
         "City St George's, University of London,",
         "Kingston, University of London,",
         "University of Greenwich,",
@@ -33,18 +33,18 @@ export default function PersonalStatement() {
 
     const universityOneOfTheBestCycle = useTextCycle([
         "with one of the best research facilities in the UK.",
-        "with one of the best-known university for masters in Artificial intelligence in UK.",
-        "with one of the best AI Lab in UK for Deep Learning.",
+        "with one of the best-known universities for masters in Artificial intelligence in the UK.",
+        "with one of the best AI lab in the UK for Deep Learning.",
         "with long-standing relationship with British Computer Society (BCS).",
-        "with one of the most diverse university in UK"
+        "with one of the most diverse university in the UK"
     ]);
 
     const courseThatDrewAttention = useTextCycle([
-        "The medical robotics and surgical techniques along with ML and AI for engineering course modules",
-        "The agents and multi-agent Systems along with Industrial AI for engineering course modules",
-        "The cyber security and AI applications an stimulating topic along with main focus on ML and DL course modules",
-        "The machine learning along with data visualisation course modules",
-        "The high performance computational infrastructures along with quantitative data analysis course modules",
+        "Also with medical robotics and surgical techniques along with ML and AI for engineering course modules",
+        "Also with agents and multi-agent Systems along with Industrial AI for engineering course modules",
+        "Also with cyber security and AI applications an stimulating topic along with main focus on ML and DL course modules",
+        "Also with machine learning along with data visualisation course modules",
+        "Also with high performance computational infrastructures along with quantitative data analysis course modules",
     ])
     const attentionCourseCycle = useTextCycle([
         "attention because of my unfulfilled childhood dream. Now,",
@@ -53,7 +53,7 @@ export default function PersonalStatement() {
 
     const lackingPartCycle = useTextCycle([
         "Electrical and Electronic Engineering (EEE)",
-        "Chemistry and Pharmaceutical Sciences",
+        "Chemistry and Pharmaceutical Science",
     ]);
 
 
@@ -127,8 +127,7 @@ export default function PersonalStatement() {
                     a suitable university there. <TextCycleOnHold
                     text={universityNameCycle.currentText}
                     title={universityNameCycle.title}
-                    action={universityNameCycle.cycleToNextText}/> got my attention with the offering of this
-                    subject, which combines <TextCycleOnHold
+                    action={universityNameCycle.cycleToNextText}/> combined with <TextCycleOnHold
                     text={universitySubjectCycle.currentText}
                     title={universitySubjectCycle.title}
                     action={universitySubjectCycle.cycleToNextText}/> at
@@ -138,11 +137,10 @@ export default function PersonalStatement() {
                     action={universityOneOfTheBestCycle.cycleToNextText}/> <TextCycleOnHold
                     text={courseThatDrewAttention.currentText}
                     title={courseThatDrewAttention.title}
-                    action={courseThatDrewAttention.cycleToNextText}/> also
-                    drew my <TextCycleOnHold
+                    action={courseThatDrewAttention.cycleToNextText}/> drew my <TextCycleOnHold
                     text={attentionCourseCycle.currentText}
                     title={attentionCourseCycle.title}
-                    action={attentionCourseCycle.cycleToNextText}/> I want to contribute
+                    action={attentionCourseCycle.cycleToNextText}/> Now, I want to contribute
                     to medical science in my lifetime by doing this program. I may lack
                     the <TextCycleOnHold
                     text={lackingPartCycle.currentText}
